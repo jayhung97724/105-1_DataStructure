@@ -1,3 +1,10 @@
+/*
+    hw04
+    系級: 資工二
+    學號: 4104056009
+    Name: 洪浩祐 
+    email: jayhung97724@gmail.com
+*/
 #include <iostream>
 #include <string>
 #include <string.h>

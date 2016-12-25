@@ -94,9 +94,9 @@ void makeMap(node* maze){
   int *load = new int[4];
   // for (int i = 0; i < 4; i++) 
   load[0] = 0;
-  load[1] = 1;
-  load[2] = 2;
-  load[3] = 3;
+  load[1] = 0;
+  load[2] = 0;
+  load[3] = 0;
   node curNode = maze[60];
   queue<node> Q;
   Q.push(curNode);
@@ -156,7 +156,7 @@ bool changeGroup(int x, int y, int newDepth, node* maze, int newGroup, int *load
     load[maze[x*sizeY + y].group]--;
     return 1;
   }
-  else if (maze[x*sizeY + y].visited && (maze[x*sizeY + y].depth == newDepth) && (load[maze[x*sizeY + y].group] >= (load[newGroup]+1)) && (maze[x*sizeY + y].group != newGroup)){
+  else if (maze[x*sizeY + y].visited && (maze[x*sizeY + y].depth <= newDepth) && (load[maze[x*sizeY + y].group] <= (load[newGroup]+1)) && (maze[x*sizeY + y].group != newGroup)){
     load[maze[x*sizeY + y].group]--;
     return 1;
   }
