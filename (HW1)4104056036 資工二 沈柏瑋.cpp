@@ -33,7 +33,7 @@ int main()
 		BFS_Path();           //use BFS method to find path
 		print_Path();         //print one of the possible path
 		
-		cout<<"要繼續下一個maze嗎?(按Y確認)"<<endl;  // ask if want to make another maze
+		cout<<"Next maze? (y) to continue: "<<endl;  // ask if want to make another maze
 		cin>>ch;  
 	}while(ch=="Y"||ch=="y");                        //if ch="Y"or"y" then continue
 	return 0;
